@@ -21,12 +21,12 @@ const Counter = sequelize.define("Counter", {
 });
 
 // 数据库初始化方法
-async function init() {
+async function initCounter() {
   await Counter.sync({ alter: true });
 }
 
 // 导出初始化方法和模型
 module.exports = {
-  init,
+  initCounter,
   Counter,
 };
